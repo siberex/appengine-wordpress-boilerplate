@@ -1,0 +1,39 @@
+{
+  "name"          : "siberex/wp-gae-boilerplate",
+  "type"          : "project",
+  "license"       : "MIT",
+  "description"   : "",
+  "homepage"      : "https://sib.li/",
+
+  "authors"       : [
+    {
+      "name"      : "Stepan Legachev",
+      "email"     : "me@sib.li",
+      "homepage"  : "https://sib.li/"
+    }
+  ],
+
+  "repositories"  : [
+    {
+      "type"        : "composer",
+      "url"         : "http://wpackagist.org"
+    }
+  ],
+
+  "require"       : {
+    "php"                     : ">=5.5.4",
+
+    "ext-pdo"                 : "*",
+    "ext-pdo_mysql"           : "*",
+
+    "johnpbloch/wordpress"    : "4.4",
+
+    "wpackagist-plugin/batcache": "*"
+
+  },
+
+  "extra"         : {
+    "wordpress-install-dir"   : "wp"
+  }
+
+}
