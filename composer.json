@@ -1,8 +1,19 @@
 {
-  "name"          : "siberex/wp-gae-boilerplate",
+  "name"          : "siberex/appengine-wordpress-boilerplate",
   "type"          : "project",
   "license"       : "MIT",
-  "description"   : "",
+  "description"   : "Wordpress boilerplate stack ready to deploy to Google App Engine",
+  "keywords"      : [
+    "wordpress",
+    "wp",
+    "google app engine",
+    "app engine",
+    "gae",
+    "composer",
+    "timber",
+    "twig",
+    "templates"
+  ],
   "homepage"      : "https://sib.li/",
 
   "authors"       : [
@@ -12,6 +23,9 @@
       "homepage"  : "https://sib.li/"
     }
   ],
+  "support"       : {
+    "issues"        : "https://github.com/siberex/appengine-wordpress-boilerplate/issues"
+  },
 
   "repositories"  : [
     {
