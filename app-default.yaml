@@ -49,7 +49,7 @@ handlers:
 
 - url: /(.+)?/?
   script: wp/index.php
-  secure: always
+  #secure: always
 
 skip_files:
 - ^(.*/)?#.*#$
