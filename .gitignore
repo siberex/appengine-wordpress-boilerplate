@@ -7,6 +7,15 @@
 .idea/**
 
 ### Composer
-/vendor/*
+/vendor
 composer.phar
 composer.lock
+
+### GAE
+app.yaml
+
+### WordPress
+/wp
+/wp-content
+
+/wp-config.php
