@@ -17,6 +17,10 @@
     {
       "type"        : "composer",
       "url"         : "http://wpackagist.org"
+    },
+    {
+      "type"        : "vcs",
+      "url"         : "https://github.com/timber/starter-theme"
     }
   ],
 
@@ -28,7 +32,9 @@
 
     "johnpbloch/wordpress"    : "4.4",
 
-    "wpackagist-plugin/batcache": "*"
+    "wpackagist-plugin/batcache": "dev-master",
+    "wpackagist-plugin/timber-library": "~0.22",
+    "upstatement/timber-starter-theme": "dev-master"
 
   },
 
