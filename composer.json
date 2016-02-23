@@ -43,10 +43,6 @@
     {
       "type"        : "vcs",
       "url"         : "https://github.com/siberex/appengine-wordpress-plugin"
-    },
-    {
-      "type"        : "vcs",
-      "url"         : "https://github.com/siberex/twentysixteen"
     }
   ],
 
@@ -63,7 +59,7 @@
     "GoogleCloudPlatform/appengine-wordpress-plugin" : "dev-master",
 
     "wpackagist-plugin/timber-library" : "~0.22",
-    "WordPress/twentysixteen" : "dev-master"
+    "wpackagist-theme/twentysixteen" : "*"
   },
 
   "extra"         : {
