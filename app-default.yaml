@@ -4,14 +4,14 @@ runtime: php55
 api_version: 1
 
 handlers:
-- url: /(.*\.(htm|html|css|js))$
-  static_files: wp/\1
-  upload: wp/.*\.(htm|html|css|js)$
+- url: /wp-content/(.*\.(htm|html|css|js))$
+  static_files: wp-content/\1
+  upload: wp-content/.*\.(htm|html|css|js)$
   application_readable: true
 
 - url: /(.*\.(htm|html|css|js))$
-  static_files: wp-content/\1
-  upload: wp-content/.*\.(htm|html|css|js)$
+  static_files: wp/\1
+  upload: wp/.*\.(htm|html|css|js)$
   application_readable: true
 
 - url: /wp-content/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
@@ -22,6 +22,11 @@ handlers:
 - url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
   static_files: wp/\1
   upload: wp/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+  application_readable: true
+
+- url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
+  static_files: wp-content/\1
+  upload: wp-content/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
   application_readable: true
 
 - url: /wp-includes/images/media/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
