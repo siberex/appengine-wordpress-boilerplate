@@ -75,3 +75,21 @@ This package is not intended to deploy Wordpress anywhere except Google App Engi
 
 If you want to deploy to Digital Ocean, Amazon, etc., use [Bedrock](https://github.com/roots/bedrock) from roots.io.
 
+
+## Local dev server
+
+To run WordPress locally on Windows and OS X, you can use the
+[Launcher](https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_PHP)
+by going to **File > Add Existing Project** or you can run one of the commands below.
+
+On Mac and Windows, the default is to use the PHP binaries bundled with the SDK:
+
+    $ APP_ENGINE_SDK_PATH/dev_appserver.py path_to_this_directory
+
+On Linux, or to use your own PHP binaries, use:
+
+    $ APP_ENGINE_SDK_PATH/dev_appserver.py --php_executable_path=PHP_CGI_EXECUTABLE_PATH path_to_this_directory
+
+Now, with App Engine running locally, visit `http://localhost:8080/wp-admin/install.php` in your browser and run
+the setup process, changing the port number from 8080 if you aren't using the default.
+
