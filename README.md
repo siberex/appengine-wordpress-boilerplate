@@ -16,6 +16,21 @@ Problem with original [google’s boilerplate](https://github.com/GoogleCloudPla
 Includes [Timber](http://upstatement.com/timber/) for easy template creation with Twig support.
 
 
+## Step 0. Composer
+
+1.  Get [composer](https://getcomposer.org/doc/00-intro.md):
+
+        curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+2. To install WP core and plugins, simply launch:
+
+        composer install
+
+    or, to update installed:
+
+        composer update
+
+
 ## GAE Prerequisites
 
 1. Install the [PHP SDK for Google App Engine](https://developers.google.com/appengine/downloads#Google_App_Engine_SDK_for_PHP)
@@ -25,4 +40,38 @@ set up a Cloud SQL instance, as described [here](https://cloud.google.com/sql/do
 Cloud Storage bucket, as described [here](https://developers.google.com/storage/docs/signup).
 Remember the name of your Cloud SQL instance to fill configuration values later. 
 To keep costs down, we suggest signing up for a D0 instance with package billing. 
+
+
+
+
+## Automated configuration
+
+Just run
+
+    sh configure.sh
+
+## Manual configuration
+
+Copy `wp-config-default.php` to `wp-config.php` and edit it replacing DB settings.
+ Add random string in AUTH_KEY, SECURE_AUTH_KEY, etc. section.
+
+Copy `app-default.yaml` to `app.yaml` and edit replacing App ID and version. 
+
+
+## GAE deployment
+
+    $ APP_ENGINE_SDK_PATH/appcfg.py update APPLICATION_DIRECTORY
+
+#### Activating the plugins
+
+Now, we just need to activate the plugins that were packaged with your app. Log into the WordPress
+administration section of your blog at `http://<PROJECT_ID>.appspot.com/wp-admin`, and visit the
+Plugins section. Click the links to activate **Batcache Manager** and **Google App Engine for WordPress**.
+
+
+## Non-GAE deployment
+
+This package is not intended to deploy Wordpress anywhere except Google App Engine.
+
+If you want to deploy to Digital Ocean, Amazon, etc., use [Bedrock](https://github.com/roots/bedrock) from roots.io.
 
