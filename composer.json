@@ -43,10 +43,6 @@
     {
       "type"        : "vcs",
       "url"         : "https://github.com/siberex/appengine-wordpress-plugin"
-    },
-    {
-      "type"        : "vcs",
-      "url"         : "https://github.com/timber/starter-theme"
     }
   ],
 
@@ -62,8 +58,7 @@
     "automattic/batcache"     : "dev-master",
     "GoogleCloudPlatform/appengine-wordpress-plugin" : "dev-master",
 
-    "upstatement/timber-starter-theme" : "dev-master"
-
+    "wpackagist-plugin/timber-library" : "~0.22"
   },
 
   "extra"         : {
