@@ -46,7 +46,7 @@
     },
     {
       "type"        : "vcs",
-      "url"         : "https://github.com/timber/starter-theme"
+      "url"         : "https://github.com/siberex/twentysixteen"
     }
   ],
 
@@ -63,10 +63,15 @@
     "GoogleCloudPlatform/appengine-wordpress-plugin" : "dev-master",
 
     "wpackagist-plugin/timber-library" : "~0.22",
-    "upstatement/timber-starter-theme" : "dev-master"
+    "WordPress/twentysixteen" : "dev-master"
   },
 
   "extra"         : {
+    "installer-paths"         : {
+      "wp-content/mu-plugins/{$name}/"  : ["type:wordpress-muplugin"],
+      "wp-content/plugins/{$name}/"     : ["type:wordpress-plugin"],
+      "wp-content/themes/{$name}/"      : ["type:wordpress-theme"]
+    },
     "wordpress-install-dir"   : "wp"
   }
 
