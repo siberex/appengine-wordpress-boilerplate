@@ -34,6 +34,18 @@
     },
     {
       "type"        : "vcs",
+      "url"         : "https://github.com/siberex/Memcached-Object-Cache"
+    },
+    {
+      "type"        : "vcs",
+      "url"         : "https://github.com/Automattic/batcache"
+    },
+    {
+      "type"        : "vcs",
+      "url"         : "https://github.com/siberex/appengine-wordpress-plugin"
+    },
+    {
+      "type"        : "vcs",
       "url"         : "https://github.com/timber/starter-theme"
     }
   ],
@@ -46,9 +58,11 @@
 
     "johnpbloch/wordpress"    : "4.4",
 
-    "wpackagist-plugin/batcache": "dev-master",
-    "wpackagist-plugin/timber-library": "~0.22",
-    "upstatement/timber-starter-theme": "dev-master"
+    "jeremyfelt/Memcached-Object-Cache" : "dev-master",
+    "automattic/batcache"     : "dev-master",
+    "GoogleCloudPlatform/appengine-wordpress-plugin" : "dev-master",
+
+    "upstatement/timber-starter-theme" : "dev-master"
 
   },
 
