@@ -52,7 +52,7 @@
     "ext-pdo"                 : "*",
     "ext-pdo_mysql"           : "*",
 
-    "johnpbloch/wordpress"    : "4.4",
+    "johnpbloch/wordpress"    : "~4.4",
 
     "jeremyfelt/Memcached-Object-Cache" : "dev-master",
     "automattic/batcache"     : "dev-master",
