@@ -2,14 +2,14 @@
 
 SCRIPTPATH=$(dirname "$0")
 
-# Read options (-p, -dbi, -db, -v for project id, instance name, db name and deployment version)
-while getopts p:dbi:db:v: opts; do
-   case ${opts} in
-      p)    projectId=${OPTARG} ;;
-      dbi)  sqlInstanceName=${OPTARG} ;;
-      db)   dbName=${OPTARG} ;;
-      v)    appVersion=${OPTARG} ;;
-   esac
+# Read options (-p, -i, -d, -v for project id, sql instance name, db name and deployment version)
+while getopts p:i:d:v: opts; do
+    case ${opts} in
+        p)  projectId=${OPTARG} ;;
+        i)  sqlInstanceName=${OPTARG} ;;
+        d)  dbName=${OPTARG} ;;
+        v)  appVersion=${OPTARG} ;;
+    esac
 done
 
 # Read values from input if not provided via options and provide suitable defaults
@@ -87,5 +87,5 @@ echo "to access Cloud SQL instance and create database there:"
 echo "CREATE DATABASE IF NOT EXISTS $dbName;"
 
 echo "To run configuration again in non-interactive mode, launch"
-echo "sh configure.sh -p $projectId -dbi $sqlInstanceName -db $dbName -v $appVersion"
+echo "sh configure.sh -p $projectId -i $sqlInstanceName -d $dbName -v $appVersion"
 
