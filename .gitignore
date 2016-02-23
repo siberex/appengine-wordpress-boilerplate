@@ -17,6 +17,7 @@ app.yaml
 ### WordPress
 /wp
 /wp-content/*
+!/wp-content/loader.php
 !/wp-content/mu-plugins
 /wp-content/mu-plugins/*
 !/wp-content/mu-plugins/loader.php
