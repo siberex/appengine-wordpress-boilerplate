@@ -19,7 +19,7 @@ app.yaml
 /wp-content/*
 !/wp-content/mu-plugins
 /wp-content/mu-plugins/*
-!/wp-content/mu-plugins/load.php
+!/wp-content/mu-plugins/loader.php
 
 
 /wp-config.php
