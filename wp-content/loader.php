@@ -12,4 +12,4 @@
  *
  * @link https://wordpress.org/plugins/memcached/installation/
  */
-require_once __DIR__ . 'mu-plugins/Memcached-Object-Cache/object-cache.php';
+require_once __DIR__ . '/mu-plugins/Memcached-Object-Cache/object-cache.php';
