@@ -101,6 +101,8 @@
      * Disable default wp-cron in favor of a real cron job
      */
     define('DISABLE_WP_CRON', true);
+
+    define( 'WP_CONTENT_DIR', __DIR__ . '/wp-content' );
     
     // configures batcache
     $batcache = [
@@ -112,7 +114,7 @@
 
     /** Absolute path to the WordPress directory. */
     if ( !defined('ABSPATH') )
-        define('ABSPATH', dirname(__FILE__) . '/wordpress/');
+        define('ABSPATH', __DIR__ . '/wp/');
 
     /** Sets up WordPress vars and included files. */
     require_once(ABSPATH . 'wp-settings.php');
