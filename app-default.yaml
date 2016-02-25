@@ -3,6 +3,15 @@ version: wpfromstarterproject
 runtime: php55
 api_version: 1
 
+env_variables:
+# Replace this line with authkeys file contents
+  DB_NAME: 'wordpress_db'
+  DB_HOST_LIVE: ':/cloudsql/your-project-id:wordpress'
+  DB_USER_LIVE: 'root'
+  DB_PASSWORD_LIVE: ''
+  DB_HOST_LOCAL: '127.0.0.1'
+  DB_USER_LOCAL: 'root'
+  DB_PASSWORD_LOCAL: ''
 
 includes:
 - handlers.yaml
