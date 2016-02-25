@@ -96,8 +96,6 @@ sed -i '' "s/wordpress_db/$dbName/g" ${APPYAML}
 
 # Replace auth keys placeholder
 PLACEHOLDER='# Replace this line with authkeys file contents'
-#sed -i '' "s/${PLACEHOLDER}/$(cat ${AUTHKEYS})/g" ${APPYAML}
-
 sed -i '' "/${PLACEHOLDER}/{
     r ${AUTHKEYS}
     d
@@ -105,10 +103,9 @@ sed -i '' "/${PLACEHOLDER}/{
 
 echo "...done!"
 
-
 # Creating local DB
-#echo "Creating local database (if not exists)..."
-#mysql -uroot -e "CREATE DATABASE IF NOT EXISTS \`${dbName}\`"
+echo "## Creating local database (if not exists)..."
+mysql -uroot -e "CREATE DATABASE IF NOT EXISTS \`${dbName}\`"
 
 echo "All Done!"
 
