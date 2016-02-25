@@ -52,10 +52,9 @@ Just run
 
 ## Manual configuration
 
-Copy `wp-config-default.php` to `wp-config.php` and edit it replacing DB settings.
- Add random string in AUTH_KEY, SECURE_AUTH_KEY, etc. section.
-
-Copy `app-default.yaml` to `app.yaml` and edit replacing App ID and version. 
+Copy `app-default.yaml` to `app.yaml` and edit it replacing DB settings, App ID and version.
+Copy `authkeys.template` file contents to `app.yaml` (replace required line)
+ adding random strings as values for AUTH_KEY, SECURE_AUTH_KEY, etc.
 
 
 ## GAE deployment
