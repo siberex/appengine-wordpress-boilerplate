@@ -88,8 +88,8 @@ sed "s/your-project-id/$projectId/g" ${SCRIPTPATH}/app-default.yaml > ${APPYAML}
 # Replace App version
 sed -i '' "s/wpfromstarterproject/$appVersion/g" ${APPYAML}
 
-# Replace Project ID and Cloud SQL instance name
-sed -i '' "s/your-project-id:wordpress/$projectId:$sqlInstanceName/g" ${APPYAML}
+# Replace Cloud SQL instance name
+sed -i '' "s/sql-instance-name/$sqlInstanceName/g" ${APPYAML}
 
 # Replace DB name
 sed -i '' "s/wordpress_db/$dbName/g" ${APPYAML}
