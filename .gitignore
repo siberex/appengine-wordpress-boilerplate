@@ -15,6 +15,7 @@ composer.lock
 app.yaml
 
 ### WordPress
+/authkeys
 /wp
 /wp-content/*
 !/wp-content/loader.php
@@ -22,5 +23,3 @@ app.yaml
 /wp-content/mu-plugins/*
 !/wp-content/mu-plugins/loader.php
 
-
-/wp-config.php
