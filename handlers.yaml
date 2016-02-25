@@ -1,0 +1,53 @@
+handlers:
+- url: /wp-content/(.*\.(htm|html|css|js))$
+  static_files: wp-content/\1
+  upload: wp-content/.*\.(htm|html|css|js)$
+  application_readable: true
+
+- url: /(.*\.(htm|html|css|js))$
+  static_files: wp/\1
+  upload: wp/.*\.(htm|html|css|js)$
+  application_readable: true
+
+- url: /wp-content/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
+  static_files: wp-content/\1
+  upload: wp-content/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+  application_readable: true
+
+- url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
+  static_files: wp/\1
+  upload: wp/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+  application_readable: true
+
+- url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
+  static_files: wp-content/\1
+  upload: wp-content/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+  application_readable: true
+
+- url: /wp-includes/images/media/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
+  static_files: wp/wp-includes/images/media/\1
+  upload: wp/wp-includes/images/media/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+  application_readable: true
+
+# FIXME: replace wp-admin URL endpoint with something less generic
+- url: /wp-admin/(.+)
+  script: wp/wp-admin/\1
+  secure: always
+
+- url: /wp-admin/
+  script: wp/wp-admin/index.php
+  secure: always
+
+- url: /wp-login.php
+  script: wp/wp-login.php
+  secure: always
+
+- url: /wp-cron.php
+  script: wp/wp-cron.php
+  login: admin
+
+- url: /xmlrpc.php
+  script: wp/xmlrpc.php
+
+- url: /wp-(.+).php
+  script: wp/wp-\1.php
